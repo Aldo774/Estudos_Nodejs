@@ -1,9 +1,14 @@
-var max = 10000;
+var createSerialGenerator = function(){
 
-var generate = function(){
-	return Math.floor(Math.random() * max);
+	var max = 10000;
+
+	var generate = function(){
+		return Math.floor(Math.random() * max);
+	};
+
+	return{
+		generate: generate
+	};
 };
 
-module.exports = {
-	generate: generate
-};
+module.exports = createSerialGenerator();
